@@ -39,14 +39,14 @@ type2Var = tk.StringVar()
 type1label = Label(root, text="Convert from", font=('Cambria', 11))
 type1label.place(x=50, y=200)
 type1 = ttk.Combobox(root, width = 27, textvariable = type1Var)  
-type1['values'] = ('Postfix',' Prefix',' Infix')
+type1['values'] = ('Postfix','Prefix','Infix')
 
 type1.place(x=50, y=225)
 
 type2label = Label(root, text="Convert to", font=('Cambria', 11))
 type2label.place(x=50, y=265)
 type2 = ttk.Combobox(root, width = 27, textvariable = type2Var)  
-type2['values'] = ('Postfix',' Prefix',' Infix')
+type2['values'] = ('Postfix','Prefix','Infix')
 
 type2.place(x=50, y=285)
 
@@ -69,13 +69,13 @@ def Convert():
         if (type2Var.get()=="Infix"):
             print("Postfix to Infix")
 
-    elif (type1Var.get()=="Prefix"):
+    if (type1Var.get()=="Prefix"):
         if (type2Var.get()=="Postfix"):
             print("Prefix To Postfix")
         if (type2Var.get()=="Infix"):
             print("Prefix To Infix")
 
-    elif (type1Var.get()=="Postfix"):
+    if (type1Var.get()=="Postfix"):
         if (type2Var.get()=="Prefix"):
             print("Postfix to Prefix")
         if (type2Var.get()=="Infix"):
