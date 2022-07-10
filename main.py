@@ -61,8 +61,10 @@ expinput = tk.Entry(root, width="30")
 expinput.place(x=50, y=125)
 
 def Convert():
-    if (type1Var.get().get()=="Postfix"):
-        if (type2Var.get()=="Prefix"):
+    if (type1Var.get()==type2Var.get()):
+        print("Both converting values can't be same!")
+    if (str(type1Var.get())=="Postfix"):
+        if (str(type2Var.get())=="Prefix"):
             print("Postfix to Prefix")
         if (type2Var.get()=="Infix"):
             print("Postfix to Infix")
